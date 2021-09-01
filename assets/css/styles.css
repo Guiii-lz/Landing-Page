@@ -13,6 +13,7 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 /*font-family: 'Montserrat', sans-serif;
@@ -34,7 +35,10 @@ h1{
     text-transform: uppercase;
 }
 h2{
-    font-size: 5.5rem;
+    font-size: 5rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 h3{
     font-size: 5rem;
@@ -52,6 +56,10 @@ h6{
 a{
     text-decoration: none;
 }
+p{
+    line-height: 3rem;
+    margin-bottom: 3rem;
+}
 
 .main-bg{
     background-image: url('/assets/img/main-bg.svg');
@@ -62,6 +70,7 @@ a{
 
 .white-bg {
     background: var(--white-color);
+    color: var(--primary-color);
 }
 
 .main-content {
@@ -156,19 +165,18 @@ a{
     
 }
 
-.intro-text-content h2 {
-    font-size: 5rem;
-    margin-bottom: 5rem;
-    text-transform: uppercase;
-    line-height: 6rem;
-}
-
-.intro-text-content p {
-    line-height: 3rem;
-
-}
 
 .intro-img img{
     max-width: 100%;
     height: auto;
+}
+
+
+.top3-content{
+    max-width: 64rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+    text-align: center ;
 }
