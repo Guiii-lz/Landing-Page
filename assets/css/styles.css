@@ -35,12 +35,16 @@ h1,h2,h3,h4,h5,h6 {
 h1{
     font-size: 6rem;
     text-transform: uppercase;
+    max-width: 100vh;
+
 }
 h2{
     font-size: 5rem;
     margin-bottom: 5rem;
     text-transform: uppercase;
     line-height: 1.2;
+    max-width: 100vh;
+
 }
 h3{
     font-size: 5rem;
@@ -76,13 +80,14 @@ p{
 }
 
 .main-content {
-    max-width: 120rem;
-    margin: 0 auto;
+    max-width: 150rem;
+    margin:  auto;
     padding: 8rem var(--gap);
 }
 
 .section{
     min-height: 100vh;
+
 }
 
 .menu-spacing {
@@ -165,12 +170,14 @@ p{
     flex-flow: column wrap;
     justify-content: center;
     
+    
 }
 
 
 .intro-img img, .intro-img svg{
     max-width: 100%;
     min-height: auto;
+    
 
 }
 
@@ -436,6 +443,45 @@ body .full-width {
     }
     .menu-spacing {
         display: none;
+    }
+    .section{
+        min-height: 100vh;
+        min-width: 70vh;
+    
+    }
+    h1{
+        font-size: 4rem;
+        text-transform: uppercase;
+        max-width: 100vh;
+    
+    }
+    h2{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        line-height: 1.2;
+        max-width: 100vh;
+    
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+    h4{
+        font-size: 2rem;
+    }
+    h5{
+        font-size: 1.5rem;
+    }
+    h6{
+        font-size: 1rem;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    p{
+        line-height: 3rem;
+        margin-bottom: 4rem;
     }
 
 }
