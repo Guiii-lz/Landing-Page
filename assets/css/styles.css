@@ -151,12 +151,11 @@ p{
 }
 
 .intro-content {
-    position: relative;
+    /*    position: relative;*/
     /*top: -7rem;*/
 
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    align-items: center;
     gap: var(--gap);
     min-height: 100vh;
 }
@@ -169,10 +168,10 @@ p{
 }
 
 
-.intro-img img{
+.intro-img img, .intro-img svg{
     max-width: 100%;
     min-height: auto;
-    margin-left: 6rem;
+
 }
 
 
@@ -241,7 +240,7 @@ p{
 }
 
 .gallery-img img:hover {
-    transform:translate(-3%,3%) scale(1.2) rotate(5deg);
+    transform: translate(-3%,3%) scale(1.2) rotate(5deg);
 }
 
 
@@ -311,6 +310,7 @@ tfoot td, table th{
     padding: 1.5rem 2rem;
     width: 100%;
     font-size: 3rem;
+    outline: none;
 }
 .form-group input:focus, .form-group textarea:focus{
     box-shadow: 0 0 10px 2.5px var(--secondary-color);
@@ -355,11 +355,31 @@ body .full-width {
 }
 
 .footer p{
-    margin:0;
-    padding:3rem;
+    margin: 0;
+    padding: 3rem;
 }
 
+.close-menu{
+    display: none;
 
+}
+
+.back-to-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    border: 0.1rem solid var(--primary-color);
+}
+
+/*Responsividade*/
 @media (max-width: 800px){
     .intro-content, .grid {
         grid-template-columns: 1fr;
@@ -375,4 +395,47 @@ body .full-width {
     .grid-one-content{
         display: block;
     }
+    .menu{
+       bottom: 0;
+       text-align: center;
+    }
+    .menu-content,  .menu-content ul{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .menu-content {
+        height: 100vh;
+    }
+    .menu{
+        display: none;
+    }
+
+    .close-menu-label::after{
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    /* × */
+    .close-menu:checked~.menu {
+        display: block;
+      }
+      
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+    .menu-spacing {
+        display: none;
+    }
+
 }

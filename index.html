@@ -12,13 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+
     <aside class="menu white-bg">
         <div class="main-content menu-content">
-            <h1>
+            <h1 onclick="getElementById('close-menu').checked = false;">
                 <a href="#home">LOGO</a>
             </h1>
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#intro">Top 3 </a></li>
                     <li><a href="#grid-one">Grid One</a></li>
                     <li><a href="#gallery">Gallery</a></li>
@@ -197,10 +201,12 @@
             </div>
         </div>
     </section>
+    
     <footer id="footer" class="footer white-bg">
         <p><a target="_blank" href="https://www.instagram.com/guiii_lz/">Feito com <span class="heart">♥</span> por Guilherme Luiz </a></p>
         <p><a target="_blank" href="https://github.com/Guiii-lz">GitHub: Guiii-lz</a></p>
     </footer>
+
+    <a class="back-to-top" href="#"><img src="/assets/img/arrow.svg" alt="seta pro topo"></a>
     
-    </body>
 </html>
